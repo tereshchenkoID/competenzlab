@@ -1,45 +1,37 @@
 .button {
+  @include flex(center, center);
   @include reset-button;
 
-  display: inline-block;
   position: relative;
-  border: 1px solid var(--color-primary);
   width: fit-content;
-  color: var(--color-primary);
-  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: var(--typography-bold);
+  color: var(--color-white);
 
-  &__text {
-    @include make-spacer('py', 2);
-    @include make-spacer('px', 4);
-    @include flex(center, center);
-    @include size(100%);
-
-    position: relative;
-    transition: var(--default-transition);
-
-    &::before {
-      @include absolute-filled;
-
-      background-color: var(--color-primary);
-      z-index: -1;
-      transition: var(--default-transition);
-      transform: scaleX(0);
-      transform-origin: 0 50%;
-      content: '';
-    }
+  &--sm {
+    height: 45px;
   }
 
-  &:hover {
+  &--md {
+    padding: rem(15px) rem(48px);
+    height: 58px;
+  }
 
-    .button {
+  &--lg {
+    height: 80px;
+    font-size: 30px;
+  }
 
-      &__text {
-        color: var(--color-text);
+  &--outline {
+    border: 1px solid var(--color-white);
+  }
 
-        &::before {
-          transform: scaleX(1);
-        }
-      }
-    }
+  &--white {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+
+  &--black {
+    background-color: var(--color-black);
   }
 }
