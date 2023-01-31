@@ -5,9 +5,13 @@ lang: en
 extends ../layouts/_layout
 
 block content
-  .page
+    +header
     main.main.js-main
+
       //+social.js-social
       //+menu.js-menu
       //+logo(aria-label="Logo").js-logo
-      p 1
+
+      .container
+        p 1
+    +footer

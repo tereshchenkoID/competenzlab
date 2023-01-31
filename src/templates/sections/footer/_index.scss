@@ -1,0 +1,138 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  &__content {
+    position: relative;
+    padding: 5.37rem 0 10rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 5.87rem 0 10.56rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 5.5rem 0 18.18rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 5.5rem 0 18.3rem;
+    }
+  }
+
+  &__logo {
+    @include size(rem(343px), rem(61px));
+
+    display: block;
+    margin-bottom: rem(25px);
+
+    @include media-breakpoint-up(sm) {
+      @include size(rem(400px), rem(71px));
+
+      margin-bottom: rem(50px);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include size(rem(500px), rem(89px));
+
+      margin-bottom: rem(77px);
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: rem(49px);
+
+    @include media-breakpoint-up(sm) {
+      height: rem(101px);
+    }
+
+    @include media-breakpoint-up(md) {
+      height: rem(135px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: rem(189px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: rem(252px);
+    }
+  }
+
+  &__social {
+    @include flex;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: rem(305px);
+    }
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: rem(30px);
+      right: 0;
+      bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__wrapper {
+    margin-bottom: rem(90px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: rem(50px);
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: rem(222px) repeat(2, 170px);
+      grid-gap: rem(80px);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: rem(300px) repeat(2, 170px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: rem(390px) repeat(2, 170px);
+      grid-gap: rem(150px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: rem(350px) repeat(2, 200px);
+      grid-gap: rem(190px);
+    }
+  }
+
+  &__list {
+    font-size: rem(20px);
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: var(--typography-extra-bold);
+  }
+
+  &__link {
+    color: var(--color-white);
+    font-weight: var(--typography-medium);
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

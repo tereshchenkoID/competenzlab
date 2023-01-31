@@ -9,15 +9,10 @@ gulp.task('copy', getTaskBuild('copy'));
 gulp.task('server', () => getTaskBuild('server'));
 gulp.task('pug', () => getTaskBuild('pug'));
 gulp.task('sass', () => getTaskBuild('sass'));
-gulp.task('sprite:svg', () => getTaskBuild('sprite-svg'));
-gulp.task('svgo', () => getTaskBuild('svgo'));
 gulp.task('webpack', getTaskBuild('webpack'));
-
 gulp.task('copy:watch', getTaskWatch('copy'));
 gulp.task('pug:watch', getTaskWatch('pug'));
 gulp.task('sass:watch', getTaskWatch('sass'));
-gulp.task('sprite:svg:watch', getTaskWatch('sprite-svg'));
-gulp.task('svgo:watch', getTaskWatch('svgo'));
 gulp.task('webpack:watch', getTaskWatch('webpack'));
 
 const setmodeProd = done => {
@@ -37,8 +32,6 @@ gulp.task(
   gulp.series(
     setmodeProd,
     'clean',
-    'sprite:svg',
-    'svgo',
     'sass',
     'pug',
     'webpack',
@@ -51,8 +44,6 @@ gulp.task(
   gulp.series(
     setmodeDev,
     'clean',
-    'sprite:svg',
-    'svgo',
     'sass',
     'pug',
     'webpack',
@@ -65,8 +56,6 @@ gulp.task(
   gulp.parallel(
     'copy:watch',
     'pug:watch',
-    'sprite:svg:watch',
-    'svgo:watch',
     'webpack:watch',
     'sass:watch'
   )

@@ -3,4 +3,10 @@
   --max-width: 100%;
 
   --default-transition: all 0.3s;
+
+  --gutter: 1rem;
+
+  @include media-breakpoint-up(md) {
+    --gutter: 1.5rem
+  }
 }

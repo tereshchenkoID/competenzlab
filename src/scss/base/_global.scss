@@ -68,3 +68,13 @@ p {
 .section {
   border: 1px solid red;
 }
+
+.container {
+  @include make-spacer('mx', auto);
+
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: 100%;
+  max-width: 98.75rem;
+  border: 1px solid green;
+}

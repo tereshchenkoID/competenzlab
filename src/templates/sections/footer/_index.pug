@@ -1,0 +1,40 @@
+mixin footer
+  footer.footer&attributes(attributes)
+    .footer__decor
+      img(src="./img/footer/decor.webp").img
+    .container
+      .footer__content
+        a(href="./index.html" aria-label="Competenzlab").footer__logo
+          img(src="./img/footer/logo.webp").img
+
+        .footer__container
+          .footer__wrapper
+            .footer__column
+              p.footer__text © 2021 CompetenzLab.
+              p.footer__text All rights reserved.
+              p.footer__text Bräuhasgasse 40/10, 1050 Vienna, Austria
+
+            .footer__column
+              ul.footer__list
+                li.footer__item
+                  p.footer__subtitle Products
+                li.footer__item
+                  a(href="./").footer__link Competenzlab.io
+                li.footer__item
+                  a(href="./").footer__link For coaches
+                li.footer__item
+                  a(href="./").footer__link Work for migrants
+
+            .footer__column
+              ul.footer__list
+                li.footer__item
+                  p.footer__subtitle Resources
+                li.footer__item
+                  a(href="./").footer__link FAQ
+                li.footer__item
+                  a(href="./").footer__link Privacy Police
+                li.footer__item
+                  a(href="./").footer__link Terms of Service
+
+          .footer__social
+            +social

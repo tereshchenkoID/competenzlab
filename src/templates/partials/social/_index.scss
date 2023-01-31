@@ -1,0 +1,48 @@
+.social {
+  @include flex(center, center);
+
+  @include media-breakpoint-up(md) {
+    flex-direction: column;
+  }
+
+  &__title {
+    @include make-spacer('mr', 10);
+    @include make-spacer('mr', 0, md);
+    @include make-spacer('mb', 12, md);
+
+    font-weight: var(--typography-medium);
+
+    @include media-breakpoint-up(md) {
+      transform: rotateZ(90deg) translateX(20px);
+    }
+  }
+
+  &__list {
+    @include flex(center, center);
+
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    @include make-spacer('mr', 7);
+    @include make-spacer('mr', 0, md);
+    @include make-spacer('mb', 3, md);
+    @include size(rem(26px));
+
+    &:last-child {
+      @include make-spacer('mr', 0);
+      @include make-spacer('mb', 0, md);
+    }
+  }
+
+  &__link {
+    display: block;
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-purple);
+    }
+  }
+}
