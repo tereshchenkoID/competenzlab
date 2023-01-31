@@ -1,0 +1,45 @@
+.button {
+  @include reset-button;
+
+  display: inline-block;
+  position: relative;
+  border: 1px solid var(--color-primary);
+  width: fit-content;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+
+  &__text {
+    @include make-spacer('py', 2);
+    @include make-spacer('px', 4);
+    @include flex(center, center);
+    @include size(100%);
+
+    position: relative;
+    transition: var(--default-transition);
+
+    &::before {
+      @include absolute-filled;
+
+      background-color: var(--color-primary);
+      z-index: -1;
+      transition: var(--default-transition);
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      content: '';
+    }
+  }
+
+  &:hover {
+
+    .button {
+
+      &__text {
+        color: var(--color-text);
+
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.toggle {
+  @include size(30px);
+  @include flex(center, center, column);
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 11;
+  cursor: pointer;
+  overflow: hidden;
+
+  &--active {
+
+    .toggle {
+
+      &__item {
+
+        &:nth-child(1) {
+          transform: translateY(8px) rotateZ(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-8px) rotateZ(-45deg);
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include size(100%, 2px);
+
+    display: block;
+    transition: all 0.3s ease-in;
+    background-color: var(--color-white);
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

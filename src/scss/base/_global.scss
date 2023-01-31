@@ -1,0 +1,70 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  @include smooth-font;
+
+  min-width: var(--min-width);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(---color-white);
+  color: var(--color-black);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--typography-regular);
+}
+
+button,
+a {
+  @include transition(all);
+}
+
+button {
+  @include reset-button;
+}
+
+a {
+  cursor: pointer;
+  color: var(--color-black);
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  @include make-spacer(m, 0);
+  @include make-spacer(p, 0);
+}
+
+.picture,
+.svg,
+.img {
+  @include size(100%);
+
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.img {
+
+  &--cover {
+    object-fit: cover;
+  }
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.section {
+  border: 1px solid red;
+}

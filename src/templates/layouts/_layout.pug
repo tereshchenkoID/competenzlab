@@ -1,0 +1,11 @@
+include ../components/index
+include ../sections/index
+include ../partials/index
+
+doctype html
+html(lang=lang)
+  head
+    include _head
+  body
+    block content
+    script(src="./js/app.js")

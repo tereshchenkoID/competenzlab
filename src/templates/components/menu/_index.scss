@@ -1,0 +1,48 @@
+.menu {
+  @include make-spacer('m', 0);
+  @include make-spacer('p', 0);
+
+  overflow: hidden;
+
+  &__item {
+    @include make-spacer('py', 2);
+
+    display: grid;
+    grid-template-columns: 7px 1fr;
+    align-items: center;
+    column-gap: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    &--active {
+      color: var(--color-primary);
+
+      .menu {
+
+        &__icon {
+
+          svg {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @include size(7px, 14px);
+
+    svg {
+      display: block;
+      color: var(--color-text);
+      transition: var(--default-transition);
+
+      path {
+        stroke: currentColor;
+      }
+    }
+  }
+}
