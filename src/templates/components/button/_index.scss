@@ -29,9 +29,17 @@
   &--white {
     background-color: var(--color-white);
     color: var(--color-black);
+
+    &:hover {
+      color: var(--color-purple);
+    }
   }
 
   &--black {
     background-color: var(--color-black);
+
+    &:hover {
+      color: var(--color-purple);
+    }
   }
 }

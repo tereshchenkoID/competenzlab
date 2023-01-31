@@ -65,10 +65,6 @@ p {
   overflow: hidden;
 }
 
-.section {
-  border: 1px solid red;
-}
-
 .container {
   @include make-spacer('mx', auto);
 
@@ -76,5 +72,4 @@ p {
   padding-right: var(--gutter);
   width: 100%;
   max-width: 98.75rem;
-  border: 1px solid green;
 }

@@ -6,6 +6,10 @@
 
   &__item {
     color: var(--color-white);
+
+    &:hover {
+      color: var(--color-purple);
+    }
   }
 
   &__text {

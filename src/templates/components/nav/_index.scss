@@ -14,4 +14,12 @@
       height: rem(110px);
     }
   }
+
+  .menu {
+    margin-right: rem(50px);
+
+    @include media-breakpoint-up(lg) {
+      margin-right: rem(100px);
+    }
+  }
 }
