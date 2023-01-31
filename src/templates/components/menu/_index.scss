@@ -5,43 +5,52 @@
   overflow: hidden;
 
   &__item {
-    @include make-spacer('py', 2);
+    color: var(--color-white);
+  }
 
-    display: grid;
-    grid-template-columns: 7px 1fr;
-    align-items: center;
-    column-gap: 10px;
-    text-transform: uppercase;
+  &__text {
+    font-size: rem(30px);
+    font-weight: var(--typography-medium);
+  }
 
-    &:hover {
-      transform: translateX(10px);
+  &--default {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      @include flex(center, center);
     }
 
-    &--active {
-      color: var(--color-primary);
+    .menu {
 
-      .menu {
+      &__item {
+        margin-right: rem(50px);
 
-        &__icon {
-
-          svg {
-            color: var(--color-primary);
-          }
+        &:last-child {
+          margin-right: 0;
         }
+
+        @include media-breakpoint-up(lg) {
+          margin-right: rem(70px);
+        }
+      }
+
+      &__text {
+        font-size: rem(20px);
       }
     }
   }
 
-  &__icon {
-    @include size(7px, 14px);
+  &--column {
+    @include flex(center, center, column);
 
-    svg {
-      display: block;
-      color: var(--color-text);
-      transition: var(--default-transition);
+    .menu {
 
-      path {
-        stroke: currentColor;
+      &__item {
+        margin-bottom: rem(40px);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

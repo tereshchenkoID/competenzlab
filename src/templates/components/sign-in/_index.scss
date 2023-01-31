@@ -1,0 +1,9 @@
+.sign-in {
+  width: rem(90px);
+  font-size: rem(16px);
+
+  @include media-breakpoint-up(sm) {
+    width: rem(165px);
+    font-size: rem(20px);
+  }
+}

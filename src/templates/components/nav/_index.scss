@@ -1,0 +1,17 @@
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: var(--color-black);
+  z-index: 11;
+
+  .container {
+    @include flex(space-between, center);
+
+    height: rem(78px);
+
+    @include media-breakpoint-up(sm) {
+      height: rem(110px);
+    }
+  }
+}

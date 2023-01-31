@@ -1,14 +1,13 @@
 .toggle {
-  @include size(30px);
+  @include size(rem(30px));
   @include flex(center, center, column);
 
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 11;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 12;
 
+  &:hover,
   &--active {
 
     .toggle {
@@ -16,7 +15,7 @@
       &__item {
 
         &:nth-child(1) {
-          transform: translateY(8px) rotateZ(45deg);
+          transform: translateY(rem(9px)) rotateZ(45deg);
         }
 
         &:nth-child(2) {
@@ -25,23 +24,31 @@
         }
 
         &:nth-child(3) {
-          transform: translateY(-8px) rotateZ(-45deg);
+          width: 100%;
+          transform: translateY(rem(-9px)) rotateZ(-45deg);
         }
       }
     }
   }
 
   &__item {
-    @include size(100%, 2px);
+    @include size(100%, rem(3px));
 
     display: block;
-    transition: all 0.3s ease-in;
+    transition: var(--default-transition);
     background-color: var(--color-white);
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: rem(3px);
+    margin-bottom: rem(3px);
+
+    &:last-child {
+      @include make-spacer('ml', 0);
+      @include make-spacer('mr', auto);
+
+      width: rem(14px);
+    }
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     display: none;
   }
 }

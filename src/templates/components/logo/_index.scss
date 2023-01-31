@@ -1,7 +1,9 @@
 .logo {
   @include make-spacer('mx', auto);
-  @include size(150px);
+  @include make-spacer('ml', 0, md);
+  @include size(rem(130px), rem(34px));
 
-  display: block;
-  color: var(--color-white);
+  @include media-breakpoint-up(sm) {
+    @include size(rem(208px), rem(56px));
+  }
 }

@@ -1,3 +1,6 @@
 .header {
-  border: 1px solid red;
+  overflow: hidden;
+  background-color: var(--color-black);
+  min-height: 100vh;
+  color: var(--color-white);
 }

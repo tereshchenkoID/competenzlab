@@ -10,6 +10,7 @@
     @include make-spacer('mr', 0, md);
     @include make-spacer('mb', 12, md);
 
+    color: var(--color-white);
     font-weight: var(--typography-medium);
 
     @include media-breakpoint-up(md) {

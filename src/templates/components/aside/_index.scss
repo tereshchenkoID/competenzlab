@@ -1,0 +1,56 @@
+.aside {
+  @include flex(center, center, column);
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+  background-color: var(--color-black);
+
+  @include media-breakpoint-up(sm) {
+    top: rem(110px);
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  .menu,
+  .sign-in {
+
+    @include media-breakpoint-up(sm) {
+      transform: translateY(rem(-30px));
+    }
+  }
+
+  .sign-in {
+    @include size(rem(174px), rem(50px));
+  }
+
+  .menu {
+    margin-bottom: rem(60px);
+  }
+
+  .social {
+    position: absolute;
+    bottom: rem(26px);
+    left: var(--gutter);
+
+    @include media-breakpoint-up(sm) {
+      bottom: rem(42px);
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: rem(26px);
+    right: var(--gutter);
+
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+}
