@@ -4,22 +4,22 @@
 
   position: relative;
   width: fit-content;
-  font-size: 20px;
+  font-size: rem(20px);
   font-weight: var(--typography-bold);
   color: var(--color-white);
 
   &--sm {
-    height: 45px;
+    height: rem(45px);
   }
 
   &--md {
     padding: rem(15px) rem(48px);
-    height: 58px;
+    height: rem(58px);
   }
 
   &--lg {
-    height: 80px;
-    font-size: 30px;
+    height: rem(80px);
+    font-size: rem(30px);
   }
 
   &--outline {
@@ -31,7 +31,7 @@
     color: var(--color-black);
 
     &:hover {
-      color: var(--color-purple);
+      color: var(--color-pink);
     }
   }
 
@@ -39,7 +39,7 @@
     background-color: var(--color-black);
 
     &:hover {
-      color: var(--color-purple);
+      color: var(--color-pink);
     }
   }
 }

@@ -1,10 +1,11 @@
 .sign-in {
   width: rem(90px);
   font-size: rem(16px);
+  transition: var(--default-transition);
 
   &:hover {
-    border-color: var(--color-purple);
-    color: var(--color-purple);
+    border-color: var(--color-pink);
+    color: var(--color-pink);
   }
 
   @include media-breakpoint-up(sm) {

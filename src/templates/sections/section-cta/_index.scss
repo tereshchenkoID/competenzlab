@@ -70,6 +70,7 @@
     &__button {
       position: relative;
       z-index: 1;
+      transition: var(--default-transition);
       width: 100%;
 
       @include media-breakpoint-up(sm) {

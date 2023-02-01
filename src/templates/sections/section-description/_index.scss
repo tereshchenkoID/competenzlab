@@ -16,7 +16,7 @@
   .article {
     margin: 0 auto rem(120px);
     width: 100%;
-    max-width: 1200px;
+    max-width: rem(1200px);
 
     &:last-child {
       margin-bottom: 0;
@@ -45,17 +45,17 @@
     &__right {
 
       @include media-breakpoint-up(md) {
-        max-width: 475px;
+        max-width: rem(475px);
       }
 
       @include media-breakpoint-up(lg) {
-        max-width: 520px;
+        max-width: rem(520px);
       }
     }
 
     &__picture {
       margin: 0 auto;
-      max-width: 500px;
+      max-width: rem(500px);
     }
 
     &__head {
@@ -77,7 +77,7 @@
     }
 
     &__title {
-      @include font-size(40px, 45px);
+      @include font-size(rem(40px), rem(45px));
 
       margin-top: 0;
       margin-bottom: 0;
@@ -86,21 +86,21 @@
       white-space: nowrap;
 
       @include media-breakpoint-up(sm) {
-        @include font-size(70px, 75px);
+        @include font-size(rem(70px), rem(75px));
       }
 
       @include media-breakpoint-up(md) {
-        font-size: 60px;
+        font-size: rem(60px);
       }
 
       @include media-breakpoint-up(lg) {
-        font-size: 70px;
+        font-size: rem(70px);
       }
     }
 
     &__subtitle {
       margin-bottom: rem(30px);
-      font-size: 20px;
+      font-size: rem(20px);
       font-weight: var(--typography-medium);
     }
 
