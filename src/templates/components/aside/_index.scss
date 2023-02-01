@@ -1,8 +1,6 @@
 .aside {
   @include flex(center, center, column);
 
-  display: none;
-
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -11,9 +9,11 @@
   left: 0;
   z-index: 12;
   background-color: var(--color-black);
+  transform: translateX(-100%);
+  transition: var(--default-transition);
 
   @include media-breakpoint-up(sm) {
-    top: rem(110px);
+    padding-top: rem(110px);
   }
 
   @include media-breakpoint-up(md) {
@@ -34,6 +34,10 @@
 
   .menu {
     margin-bottom: rem(60px);
+
+    @media screen and ( max-height: rem(400px) ) {
+      margin-bottom: rem(20px);
+    }
   }
 
   .social {
@@ -54,5 +58,9 @@
     @include media-breakpoint-up(sm) {
       display: none;
     }
+  }
+
+  &.active {
+    transform: translateX(0);
   }
 }

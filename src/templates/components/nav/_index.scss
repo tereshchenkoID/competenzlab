@@ -2,8 +2,13 @@
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 12;
   background-color: var(--color-black);
-  z-index: 11;
+
+  .toggle,
+  .sign-in {
+    flex-shrink: 0;
+  }
 
   .container {
     @include flex(space-between, center);
@@ -16,10 +21,36 @@
   }
 
   .menu {
+    margin-left: auto;
     margin-right: rem(50px);
 
     @include media-breakpoint-up(lg) {
       margin-right: rem(100px);
+    }
+  }
+
+  .toggle {
+
+    @include media-breakpoint-up(sm) {
+      margin-right: rem(135px);
+    }
+  }
+
+  &.is-transparent {
+    background-color: transparent;
+  }
+
+  &.active {
+    background-color: transparent;
+    transition: background-color 0.7s ease-in-out;
+
+    .logo,
+    .sign-in {
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        display: flex;
+      }
     }
   }
 }

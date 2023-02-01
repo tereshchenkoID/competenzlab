@@ -17,12 +17,22 @@
 
     @include media-breakpoint-up(md) {
       padding-top: rem(222px);
-      padding-right: rem(85px);
     }
 
     @include media-breakpoint-up(lg) {
-      padding-right: var(--gutter);
+      padding-bottom: rem(100px);
     }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: var(--gutter);
+      padding-bottom: rem(176px);
+    }
+  }
+
+  .title,
+  .description {
+    position: relative;
+    z-index: 1;
   }
 
   .title {
@@ -82,6 +92,7 @@
 
   .social {
     justify-content: flex-start;
+    z-index: 1;
 
     @include media-breakpoint-up(md) {
       position: absolute;
@@ -89,8 +100,39 @@
       right: var(--gutter);
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       right: rem(-30px);
+    }
+  }
+
+  .decor {
+    @include size(rem(733px), rem(953px));
+
+    position: absolute;
+    top: rem(-240px);
+    right: rem(-490px);
+
+    @include media-breakpoint-up(sm) {
+      @include size(rem(1478px), rem(1922px));
+
+      top: rem(-660px);
+      right: rem(-850px);
+    }
+
+    @include media-breakpoint-up(md) {
+      top: rem(-640px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include size(rem(1728px), rem(2245px));
+
+      top: rem(-880px);
+      right: rem(-950px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      top: rem(-820px);
+      right: rem(-860px);
     }
   }
 }

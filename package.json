@@ -1,5 +1,5 @@
 {
-  "name": "space-ship",
+  "name": "competenzlab",
   "version": "0.0.1",
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
@@ -76,14 +76,6 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "@barba/core": "^2.3.10",
-    "@barba/router": "^2.1.4",
-    "cropperjs": "^1.5.12",
-    "gsap": "^3.10.4",
-    "jquery": "^3.4.1",
-    "jquery.photoswipe": "^1.1.1",
-    "nouislider": "^15.6.0",
-    "slick-carousel": "^1.8.1",
-    "slick-slider": "^1.8.2"
+    "gsap": "^3.10.4"
   }
 }

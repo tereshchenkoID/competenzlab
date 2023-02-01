@@ -35,11 +35,6 @@ function createConfig(env) {
           }
         }
       }),
-      // new webpack.ProvidePlugin({
-      //   $: 'jquery',
-      //   jQuery: 'jquery',
-      //   'window.jQuery': 'jquery',
-      // }),
       new webpack.NoEmitOnErrorsPlugin(),
 
       new BundleAnalyzerPlugin({

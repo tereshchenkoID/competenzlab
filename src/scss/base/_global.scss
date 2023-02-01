@@ -17,11 +17,15 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--typography-regular);
+
+  &.overflow {
+    overflow: hidden;
+  }
 }
 
 button,
 a {
-  @include transition(all);
+  transition: color 0.3s ease-in-out;
 }
 
 button {
@@ -71,5 +75,25 @@ p {
   padding-left: var(--gutter);
   padding-right: var(--gutter);
   width: 100%;
-  max-width: 98.75rem;
+
+  @include media-breakpoint-up(lg) {
+    max-width: rem(1265px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: rem(1588px);
+  }
+}
+
+.default-animation {
+  transition-duration: .8s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  transform: translateY(1rem);
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0)
+  }
 }

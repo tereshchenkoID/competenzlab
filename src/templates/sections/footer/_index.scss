@@ -82,6 +82,7 @@
 
   &__container {
     position: relative;
+    z-index: 1;
   }
 
   &__wrapper {
@@ -130,8 +131,10 @@
     color: var(--color-white);
     font-weight: var(--typography-medium);
     opacity: 0.6;
+    transition: var(--default-transition);
 
     &:hover {
+      color: var(--color-purple);
       opacity: 1;
     }
   }
