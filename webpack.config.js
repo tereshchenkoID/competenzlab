@@ -24,9 +24,7 @@ function createConfig(env) {
       filename: '[name].js',
       publicPath: 'js/',
     },
-    devtool: isProduction ?
-      '#source-map' :
-      '#cheap-module-eval-source-map',
+    devtool: '#source-map',
     plugins: [
       new webpack.LoaderOptionsPlugin({
         options: {
@@ -48,7 +46,7 @@ function createConfig(env) {
       alias: {},
     },
     optimization :{
-      minimize: isProduction
+      minimize: true
     },
     module: {
       rules: [
