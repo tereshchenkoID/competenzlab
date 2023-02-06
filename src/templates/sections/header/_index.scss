@@ -39,7 +39,6 @@
     @include font-size(rem(50px), rem(55px));
 
     margin-bottom: rem(50px);
-    text-transform: lowercase;
     font-weight: var(--typography-bold);
 
     @include media-breakpoint-up(sm) {
