@@ -76,6 +76,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "gsap": "^3.10.4"
+    "gsap": "^3.10.4",
+    "html2pdf.js": "^0.10.1"
   }
 }
